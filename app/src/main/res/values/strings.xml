@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">NotePlus</string>
+    <string name="app_name" translatable="false">NotePlus</string>
+
+    <!-- Text Areas -->
+    <string name="text_area">Type a new note</string>
+    <string name="title_text_area">Title</string>
+
+    <!-- Folder Creation Popup -->
+    <string name="folder_popup_title">Folder Creation</string>
+    <string name="folder_popup_text_area">Folder Name</string>
+    <string name="folder_popup_switch_label">Protect the folder</string>
+    <string name="folder_popup_button">Create</string>
+
+    <!-- Password Creation Popup -->
+    <string name="password_creation_popup_title">Define a Password</string>
+    <string name="password_creation_popup_text_area">Password</string>
+    <string name="password_creation_popup_confirm_text_area">Confirm Password</string>
+    <string name="password_creation_popup_button">@string/folder_popup_button</string>
+
+    <!-- Password Popup -->
+    <string name="password_popup_title">Folder Protected</string>
+    <string name="password_popup_text_area">@string/password_creation_popup_text_area</string>
+    <string name="password_popup_confirm_text_area">Confirm Password</string>
+    <string name="password_popup_button">@string/folder_popup_button</string>
+
 </resources>
