@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import fr.synol.noteplus.R
 
-class FolderAdapter : RecyclerView.Adapter<FolderAdapter.ViewHolder>() {
+class FolderAdapter(private val layoutId: Int) : RecyclerView.Adapter<FolderAdapter.ViewHolder>() {
 
     /// Box for regroup all components
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -16,7 +16,7 @@ class FolderAdapter : RecyclerView.Adapter<FolderAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater
             .from(parent.context)
-            .inflate(R.layout.item_folder, parent, false)
+            .inflate(layoutId, parent, false)
         return ViewHolder(view)
     }
 

@@ -6,58 +6,62 @@
     android:background="@color/dark_grey"
     android:layout_marginTop="5dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/image_cardView"
+    <ImageView
+        android:id="@+id/folder_image"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="10dp"
+        android:src="@drawable/img_folder"
+        android:layout_marginLeft="@dimen/item_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/dark_grey"
-            android:src="@drawable/img_folder" />
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/image_cardView"
-        app:layout_constraintTop_toTopOf="@+id/image_cardView" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/folder_image"
+        app:layout_constraintTop_toTopOf="@+id/folder_image" />
 
     <TextView
-        android:id="@+id/title_textView"
+        android:id="@+id/folder_name"
         style="@style/SubTitleStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Folder Name"
-        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/item_margin"
         app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintStart_toEndOf="@+id/image_cardView" />
+        app:layout_constraintStart_toEndOf="@+id/folder_image" />
 
     <TextView
-        android:id="@+id/subtitle_textView"
+        android:id="@+id/notes_count"
         style="@style/DefaultTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="O note(s)"
-        android:layout_marginLeft="@dimen/default_margin"
-        app:layout_constraintStart_toEndOf="@+id/image_cardView"
+        app:layout_constraintStart_toStartOf="@+id/folder_name"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <ImageView
+        android:id="@+id/pinned"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_unpinned"
         android:layout_marginRight="@dimen/default_margin"
-
+        android:src="@drawable/ic_unpinned"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/locked"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_locked"
+        android:layout_marginRight="@dimen/item_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/pinned"
+        app:layout_constraintEnd_toStartOf="@+id/pinned"
+        app:layout_constraintTop_toTopOf="@+id/pinned" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

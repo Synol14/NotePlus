@@ -15,7 +15,7 @@ class HomeFragment : Fragment() {
         val view = inflater?.inflate(R.layout.fragment_home, container, false)
 
         val folderRecyclerView = view.findViewById<RecyclerView>(R.id.folder_recycler_view)
-        folderRecyclerView.adapter = FolderAdapter()
+        folderRecyclerView.adapter = FolderAdapter(R.layout.item_folder)
 
         return view;
     }
