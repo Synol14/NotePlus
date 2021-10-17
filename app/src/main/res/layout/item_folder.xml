@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/dark_grey"
-    android:layout_marginTop="5dp">
+    android:background="@color/dark_grey">
 
     <ImageView
         android:id="@+id/folder_image"
@@ -35,7 +34,7 @@
         app:layout_constraintStart_toEndOf="@+id/folder_image" />
 
     <TextView
-        android:id="@+id/notes_count"
+        android:id="@+id/folder_description"
         style="@style/DefaultTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,24 +43,26 @@
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <ImageView
-        android:id="@+id/pinned"
+        android:id="@+id/star_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/default_margin"
         android:src="@drawable/ic_unpinned"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:tint="@color/light_grey"/>
 
     <ImageView
-        android:id="@+id/locked"
+        android:id="@+id/lock_icon"
         android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_locked"
         android:layout_marginRight="@dimen/item_margin"
-        app:layout_constraintBottom_toBottomOf="@+id/pinned"
-        app:layout_constraintEnd_toStartOf="@+id/pinned"
-        app:layout_constraintTop_toTopOf="@+id/pinned" />
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon"
+        app:layout_constraintEnd_toStartOf="@+id/star_icon"
+        app:layout_constraintTop_toTopOf="@+id/star_icon"
+        app:tint="@color/light_grey" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
